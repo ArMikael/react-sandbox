@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-var CONTACTS = [
+const CONTACTS = [
     {
         id: 1,
         name: 'Darth Vader',
@@ -26,27 +26,53 @@ var CONTACTS = [
     }
 ];
 
-export class App extends Component {
+let ContactsList = React.createClass({
     getInitialState() {
         return {
             displayedContacts: CONTACTS
         }
-    }
+    },
 
     searchContact(event) {
         console.log(event.target.value);
 
-        var searchQuery = event.target.value.toLowerCase();
-        var displayedContacts = CONTACTS.filter(function (elem) {
-            var searchValue = elem.name.toLowerCase();
+        let searchQuery = event.target.value.toLowerCase();
+        let displayedContacts = CONTACTS.filter(function (elem) {
+            let searchValue = elem.name.toLowerCase();
             return searchValue.indexOf(searchQuery) !== 1;
         });
 
         this.setState({
             displayedContacts: displayedContacts
         });
-    };
+    },
 
+    render: function () {
+        return (
+            <div className="contacts">
+                <input type="text" onChange={ this.searchContact } />
+                <ul className="contacts-list">
+                    {
+                        CONTACTS.map(function (el) {
+                            return <li> { el.name } </li>
+                        })
+                    }
+
+
+                    {/*<li className="contact">*/}
+                        {/*<img className="contact-image" src={ this.props.image } alt="" width="60px" height="60px" />*/}
+                        {/*<div className="contact-info">*/}
+                            {/*<div className="contact-name"> { this.prop.name } </div>*/}
+                            {/*<div className="contact-number"> { this.prop.phone } </div>*/}
+                        {/*</div>*/}
+                    {/*</li>*/}
+                </ul>
+            </div>
+        );
+    }
+});
+
+export class App extends Component {
     render() {
         return (
             <div className="App">
@@ -55,12 +81,12 @@ export class App extends Component {
                     <h2>React Sandbox</h2>
                 </div>
 
-                <input type="text" onChange={this.searchContact} />
-
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                     This app is created with {this.props.language}.
                 </p>
+
+                <ContactsList />
             </div>
         );
     }
