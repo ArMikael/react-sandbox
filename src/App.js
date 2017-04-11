@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Timer from './timer/Timer';
+
 const CONTACTS = [
     {
         id: 1,
@@ -84,29 +86,6 @@ let ContactsList = React.createClass({
     }
 });
 
-let Timer = React.createClass({
-    getInitialState: function() {
-        return {
-            seconds: 0
-        }
-    },
-
-    componentDidMount: function () {
-      setInterval(this.tick, 1000);
-    },
-
-    tick: function () {
-        this.setState({
-           seconds: this.state.seconds + 1
-        });
-    },
-
-    render: function () {
-        return (
-            <h4 className="timer">Прошло {this.state.seconds} секунд</h4>
-        );
-    }
-});
 
 export class App extends Component {
     render() {
