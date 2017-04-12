@@ -1,10 +1,15 @@
 import React from 'react';
 
-let Timer =  React.createClass ({
+const Timer =  React.createClass ({
     getInitialState() {
         return {
             seconds: 0
         }
+    },
+
+    // Validation in React
+    propTypes: {
+        // seconds: React.PropTypes.string.isRequired
     },
 
     tick() {

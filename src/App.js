@@ -4,8 +4,9 @@ import './App.css';
 
 import ContactsList from './contacts/ContactsList';
 import Timer from './timer/Timer';
+import Subscribe from './forms/Subscribe';
 
-export class App extends Component {
+class App extends Component {
     render() {
         return (
             <div className="App">
@@ -22,6 +23,8 @@ export class App extends Component {
                 <ContactsList />
 
                 <Timer />
+
+                <Subscribe />
             </div>
         );
     }

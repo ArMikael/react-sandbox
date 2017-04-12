@@ -29,7 +29,7 @@ const CONTACTS = [
 
 
 
-let ContactsList = React.createClass({
+const ContactsList = React.createClass({
     getInitialState: function() {
         return {
             displayedContacts: CONTACTS

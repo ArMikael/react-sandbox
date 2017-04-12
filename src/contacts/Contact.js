@@ -1,6 +1,11 @@
 import React from 'react';
 
-let Contact = React.createClass({
+const Contact = React.createClass({
+    // Validation in React
+    propTypes: {
+        phoneNumber: React.PropTypes.string.isRequired
+    },
+
     render: function () {
         return (
             <li className="contact">
