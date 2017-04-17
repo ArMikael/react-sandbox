@@ -40,4 +40,12 @@ class Subscribe extends React.Component {
     }
 }
 
+Subscribe.propTypes = {
+
+};
+
+Subscribe.defaultProps = {
+
+};
+
 export default Subscribe;
