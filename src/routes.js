@@ -1,22 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import {Route, IndexRoute} from 'react-router';
 
-import App from 'App';
+import App from './App';
 import Home from './pages/Home';
 import About from './pages/About';
 
-class Router extends React.Component {
-    render() {
-        return (
-            <Router history={hashHistory}>
-                <Route path="/" component={App}>
-                    <IndexRoute component={Home}></IndexRoute>
-                    <Route path="/about" component={About}></Route>
-                </Route>
-            </Router>
-        )
-    }
-}
+// class RouterModule extends React.Component {
+//     render() {
+//         return (
+//             <Router history={hashHistory}>
+//                 <Route path="/" component={App}>
+//                     <IndexRoute component={Home}></IndexRoute>
+//                     <Route path="/about" component={About}></Route>
+//                 </Route>
+//             </Router>
+//         )
+//     }
+// }
+//
+// export default RouterModule;
 
-export default Router;
+export default (
+    <Route path="/" component={App}>
+        <IndexRoute component={Home}></IndexRoute>
+        <Route path="/about" component={About}></Route>
+    </Route>
+)

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,7 +6,7 @@ import ContactsList from './contacts/ContactsList';
 import Timer from './timer/Timer';
 import Subscribe from './forms/Subscribe';
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div className="App">
@@ -25,9 +25,15 @@ class App extends Component {
                 <Timer />
 
                 <Subscribe />
+
+                {this.props.children}
             </div>
         );
     }
 }
+
+App.propTypes = {
+    children: PropTypes.object.isRequired
+};
 
 export default App;
