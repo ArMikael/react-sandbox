@@ -1,4 +1,5 @@
 import React from 'react';
+
 import '../App.css';
 import logo from '../logo.svg';
 
@@ -6,7 +7,7 @@ import ContactsList from '../contacts/ContactsList';
 import Timer from '../timer/Timer';
 import Subscribe from '../forms/Subscribe';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     render() {
         return (
             <div className="App">
@@ -31,3 +32,5 @@ export default class Home extends React.Component {
         )
     }
 }
+
+export default Home;
