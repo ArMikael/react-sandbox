@@ -24,18 +24,20 @@ class Subscribe extends React.Component {
     }
 
     _validate(event){
-        const value = event.target.value;
+        // const value = event.target.value;
+        const value = this.refs.email.value; // refs in React allows to refer to specific HTML node
+
         this.setState({ valid: value.length > 4 });
         // console.log('Validating...');
     }
 
     render(){
         return (
-                <form id="subscribeForm" onSubmit={this._submit}>
-                    <input type="email" id="email" onChange={this._validate}
-                           style={{ background: this.state.valid ? 'white' : 'pink' }} />
-                    <button type="submit">Submit</button>
-                </form>
+            <form id="subscribeForm" onSubmit={this._submit}>
+                <input ref="email" type="email" id="email" onChange={this._validate}
+                       style={{ background: this.state.valid ? 'white' : 'pink' }} />
+                <button type="submit">Submit</button>
+            </form>
         );
     }
 }
