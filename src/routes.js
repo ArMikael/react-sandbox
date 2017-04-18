@@ -20,9 +20,13 @@ import About from './pages/About';
 //
 // export default RouterModule;
 
-export default (
-    <Route path="/" component={App}>
-        <IndexRoute component={Home}></IndexRoute>
-        <Route path="/about" component={About}></Route>
-    </Route>
-)
+
+export default class RouterModule extends React.Component {
+    render() {
+        return (
+            <Route path="/" component={App}>
+                <IndexRoute component={Home}></IndexRoute>
+                <Route path="/about" component={About}></Route>
+            </Route>)
+    }
+}
