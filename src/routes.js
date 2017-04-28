@@ -6,10 +6,16 @@ import About from './pages/About';
 import Timer from './timer/Timer';
 
 const Links = () => (
-    <nav>
-        <NavLink exact activeClassName="active" to="/">Home</NavLink>
-        <NavLink exact activeClassName="active" to="/about">About</NavLink>
-        <NavLink exact activeClassName="active" to={{pathname: '/timer'}}>Timer</NavLink>
+    <nav className="nav-menu">
+        <NavLink exact activeClassName="active" to="/" className="nav-link">
+            Home
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/about" className="nav-link">
+            About
+        </NavLink>
+        <NavLink exact activeClassName="active" to={{pathname: '/timer'}} className="nav-link">
+            Timer
+        </NavLink>
     </nav>
 );
 

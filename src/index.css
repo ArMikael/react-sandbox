@@ -44,10 +44,17 @@ body {
   color: grey;
 }
 
-a {
-  margin: 5px;
+.nav-menu {
+  height: 40px;
+  line-height: 40px;
 }
 
-a.active {
+.nav-link {
+  margin: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link.active {
   color: red;
 }
