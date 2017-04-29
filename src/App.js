@@ -2,6 +2,8 @@ import React from 'react';
 
 import logo from './logo.svg';
 import Router from './routes';
+import Comments from './components/Comments';
+
 
 class App extends React.Component {
     render() {
@@ -14,6 +16,8 @@ class App extends React.Component {
 
 
                 <Router />
+
+                <Comments comments={ "Hello friend! Good job!" } />
             </div>
         );
     }
