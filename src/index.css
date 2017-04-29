@@ -58,3 +58,65 @@ body {
 .nav-link.active {
   color: red;
 }
+
+/* Arts and Paintings */
+.paintings-list {
+  padding: 0;
+  border: 1px solid gainsboro;
+  width: 800px;
+  margin: 10px auto 40px;
+
+  text-align: left;
+  list-style: none;
+}
+
+.painting-item {
+  height: 30px;
+  line-height: 30px;
+}
+
+.table-header {
+  height: 30px;
+  line-height: 30px;
+  background-color: #C1C900;
+  font-weight: 600;
+}
+
+.painting-item:not(:last-child) {
+  border-bottom: 1px solid gainsboro;
+}
+
+.painting-item:nth-child(odd) {
+  background-color: beige;
+}
+
+.painting-title,
+.painting-artist,
+.painting-year,
+.painting-price {
+  display: inline-block;
+  /*margin-right: -4px;*/
+  padding: 0 20px;
+  border-right: 1px solid gainsboro;
+  box-sizing: border-box;
+}
+
+.painting-title {
+  width: 38%;
+  text-decoration: none;
+  color: black;
+}
+
+.painting-artist {
+  width: 38%;
+}
+
+.painting-year {
+  width: 12%;
+  text-align: center;
+}
+
+.painting-price {
+  width: 12%;
+  text-align: center;
+}
