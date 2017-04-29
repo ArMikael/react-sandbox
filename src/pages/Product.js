@@ -1,23 +1,35 @@
 import React from 'react';
+import Data from '../data/data';
+
+console.log('DATA: ', Data.ArtsData);
+
 
 class Product extends React.Component {
     render() {
+        console.log(this.props);
+        let id = this.props.match.params.id;
+        console.log(id);
+        let data = Data.ArtsData;
+        console.log('Data: ', data);
+        let product = data[id];
+        console.log('Product: ', product);
+
         return (
-            <div id={ this.props.id }>
+            <div id={ product.id }>
                 <h2 className="painting-title">
-                    { this.props.data.title }
+                    { product.title }
                 </h2>
 
                 <h3 className="painting-artist">
-                    { this.props.data.artist }
+                    { product.artist }
                 </h3>
 
                 <p className="painting-description">
-                    { this.props.data.description }
+                    { product.description }
                 </p>
 
                 <strong className="painting-price">
-                    { this.props.data.price }
+                    { product.price }
                 </strong>
             </div>
         )

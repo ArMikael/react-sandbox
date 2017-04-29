@@ -1,12 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Painting extends React.Component {
     render() {
         return (
             <li className="painting-item" id={ this.props.data.id }>
-                <a href="#" className="painting-title">
+                <NavLink to={ 'arts/product/' + this.props.data.id } data={ this.props.data } className="painting-title">
                     { this.props.data.title }
-                </a>
+                </NavLink>
                 <div className="painting-artist">
                     { this.props.data.artist }
                 </div>

@@ -6,6 +6,8 @@ import About from './pages/About';
 import Arts from './pages/Arts';
 import Timer from './components/Timer';
 
+import Product from './pages/Product';
+
 const Links = () => (
     <nav className="nav-menu">
         <NavLink exact activeClassName="active" to="/" className="nav-link">
@@ -30,9 +32,10 @@ class App extends React.Component {
                 <div>
                     <Links />
                     <Route exact path="/" component={ Home } />
-                    <Route path="/arts" component={ Arts } />
+                    <Route exact path="/arts" component={ Arts } />
                     <Route path="/about" component={ About } />
                     <Route path="/timer" component={ Timer } />
+                    <Route path="/arts/product/:id" component={ Product } />
                 </div>
             </Router>
         );
