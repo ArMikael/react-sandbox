@@ -37,6 +37,4 @@ class Data {
     static get ArtsData() {
         return ArtsData;
     }
-
-
 }

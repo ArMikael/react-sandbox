@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Arts from './pages/Arts';
-import Timer from './components/Timer';
+import Widgets from './pages/Widgets';
 
 import Product from './pages/Product';
 
@@ -19,8 +19,8 @@ const Links = () => (
         <NavLink exact activeClassName="active" to="/about" className="nav-link">
             About
         </NavLink>
-        <NavLink exact activeClassName="active" to={{pathname: '/timer'}} className="nav-link">
-            Timer
+        <NavLink exact activeClassName="active" to={{pathname: '/widgets'}} className="nav-link">
+            Widgets
         </NavLink>
     </nav>
 );
@@ -34,7 +34,7 @@ class App extends React.Component {
                     <Route exact path="/" component={ Home } />
                     <Route exact path="/arts" component={ Arts } />
                     <Route path="/about" component={ About } />
-                    <Route path="/timer" component={ Timer } />
+                    <Route path="/widgets" component={ Widgets } />
                     <Route path="/arts/product/:id" component={ Product } />
                 </div>
             </Router>

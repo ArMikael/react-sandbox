@@ -24,7 +24,9 @@ const Timer =  React.createClass ({
 
     render() {
         return (
-            <h4 className="timer">Прошло {this.state.seconds} секунд</h4>
+            <h4 className="timer">
+                Прошло {this.state.seconds} секунд
+            </h4>
         );
     }
 });
