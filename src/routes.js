@@ -16,11 +16,11 @@ const Links = () => (
         <NavLink exact activeClassName="active" to="/arts" className="nav-link">
             Arts
         </NavLink>
-        <NavLink exact activeClassName="active" to="/about" className="nav-link">
-            About
-        </NavLink>
         <NavLink exact activeClassName="active" to={{pathname: '/widgets'}} className="nav-link">
             Widgets
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/about" className="nav-link">
+            About
         </NavLink>
     </nav>
 );
