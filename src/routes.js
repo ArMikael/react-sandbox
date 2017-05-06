@@ -7,6 +7,7 @@ import Arts from './pages/Arts';
 import Widgets from './pages/Widgets';
 
 import Product from './pages/Product';
+import NewPainting  from './pages/NewPainting';
 
 const Links = () => (
     <nav className="nav-menu">
@@ -22,6 +23,9 @@ const Links = () => (
         <NavLink exact activeClassName="active" to="/about" className="nav-link">
             About
         </NavLink>
+        <NavLink exact ctiveClassName="active" to="/arts/new-painting" className="nav-link" >
+            Add Painting
+        </NavLink>
     </nav>
 );
 
@@ -36,6 +40,7 @@ class App extends React.Component {
                     <Route path="/about" component={ About } />
                     <Route path="/widgets" component={ Widgets } />
                     <Route path="/arts/product/:id" component={ Product } />
+                    <Route path="/arts/new-painting" component={ NewPainting } />
                 </div>
             </Router>
         );

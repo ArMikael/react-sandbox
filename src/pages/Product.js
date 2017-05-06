@@ -1,7 +1,5 @@
 import React from 'react';
-import Data from '../data/data';
-
-console.log('DATA: ', Data.ArtsData);
+const Data = require('../data/data.json');
 
 
 class Product extends React.Component {
